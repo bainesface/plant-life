@@ -13,10 +13,10 @@ const GridSpace: FunctionComponent<GridSpaceProps> = ({
 	const colourLookup: {
 		[key in Area | 'nothing']: string;
 	} = {
-		grass: 'bg-lime-600',
-		soil: 'bg-yellow-900',
-		paving: 'bg-stone-300',
-		decking: 'bg-amber-800',
+		grass: 'bg-lime-500',
+		soil: 'bg-yellow-800',
+		paving: 'bg-stone-200',
+		decking: 'bg-amber-700',
 		nothing: 'bg-orange-100',
 	};
 
@@ -27,7 +27,7 @@ const GridSpace: FunctionComponent<GridSpaceProps> = ({
 					return currColour === 'nothing' ? colour : 'nothing';
 				});
 			}}
-			className={`w-[100px] h-[100px] ${colourLookup[spaceColour]} border-black border-[0.5px]`}></div>
+			className={`w-[100px] h-[100px] ${colourLookup[spaceColour]} shadow-[inset_0_0_6px_rgba(0,0,0,0.6)]`}></div>
 	);
 };
 

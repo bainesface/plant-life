@@ -17,7 +17,7 @@ const GrowingArea: FunctionComponent<GrowingAreaProps> = ({
 	}
 
 	return (
-		<div className='border-[0.5px] border-black flex flex-col'>
+		<div className='border-[5px] rounded border-black/75 flex flex-col'>
 			{rows.map((col, rowI) => {
 				return (
 					<div key={rowI} className='flex'>
