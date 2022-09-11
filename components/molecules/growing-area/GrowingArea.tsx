@@ -13,21 +13,16 @@ const GrowingArea: FunctionComponent<GrowingAreaProps> = ({
 }) => {
 	const rows = [];
 	for (let i = 1; i <= width; i++) {
-		rows.push(i);
+		rows.push(areas.slice(length * (i - 1), length * i));
 	}
 
 	return (
 		<div className='border-[0.5px] border-black flex flex-col'>
 			{rows.map((col, rowI) => {
-				console.log(col);
 				return (
-					<div className='flex' key={rowI}>
-						{areas.map((area, areaI) => {
-							console.log(area, 'in grid area');
-							console.log(areaI, 'area index', col);
-							console.log(length * col, 'lenght * rowi');
-
-							return <GridSpace key={areaI} colour={area} />;
+					<div key={rowI} className='flex'>
+						{col.map((area, i) => {
+							return <GridSpace key={i} colour={area} />;
 						})}
 					</div>
 				);

@@ -9,7 +9,7 @@ export default {
 } as ComponentMeta<typeof GrowingArea>;
 
 export const SmallContainer: ComponentStory<typeof GrowingArea> = () => {
-	const [areas, setAreas] = useState<Area[]>([
+	const [areas] = useState<Area[]>([
 		'soil',
 		'soil',
 		'grass',
@@ -22,7 +22,7 @@ export const SmallContainer: ComponentStory<typeof GrowingArea> = () => {
 };
 
 export const MediumContainer: ComponentStory<typeof GrowingArea> = () => {
-	const [areas, setAreas] = useState<Area[]>([
+	const [areas] = useState<Area[]>([
 		'soil',
 		'soil',
 		'grass',
@@ -38,4 +38,23 @@ export const MediumContainer: ComponentStory<typeof GrowingArea> = () => {
 	]);
 
 	return <GrowingArea areas={areas} totalArea={{ length: 4, width: 3 }} />;
+};
+
+export const LongContainer: ComponentStory<typeof GrowingArea> = () => {
+	const [areas] = useState<Area[]>([
+		'soil',
+		'soil',
+		'grass',
+		'grass',
+		'grass',
+		'grass',
+		'decking',
+		'decking',
+		'decking',
+		'grass',
+		'grass',
+		'grass',
+	]);
+
+	return <GrowingArea areas={areas} totalArea={{ length: 2, width: 6 }} />;
 };
