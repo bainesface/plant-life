@@ -23,6 +23,7 @@ const GridSpace: FunctionComponent<GridSpaceProps> = ({
 	return (
 		<div
 			onClick={() => {
+				console.log(colour);
 				setSpaceColour((currColour) => {
 					return currColour === 'nothing' ? colour : 'nothing';
 				});
